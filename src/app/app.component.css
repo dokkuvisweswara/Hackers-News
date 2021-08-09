@@ -1,0 +1,13 @@
+.maincontent{
+    background-color: rgb(246, 246, 239);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.approot{
+    width: 85%;
+    background-color: rgb(246, 246, 239);
+}
