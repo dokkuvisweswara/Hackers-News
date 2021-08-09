@@ -1,11 +1,3 @@
 <div *ngFor="let news of finalNews; let i = index">
-    <div class="datshow">
-        <div class="index">{{i+1}} >></div>
-        <div class="titledata">
-            <b>{{news.title}}</b><br/>
-            <span>{{news.score}} Points by {{news.by}}</span> |
-            <span>{{news.time}}</span> | <span>hide</span> |
-            <a href="#">{{news.descendants}}&nbsp;comments</a>
-        </div>
-    </div>
+    <app-datashow [news]="news" [i]="i"></app-datashow>
 </div>

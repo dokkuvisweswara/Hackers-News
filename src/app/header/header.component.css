@@ -50,3 +50,15 @@ a.active {
 .callAPi{
   float: right;
 }
+.menu-container menu{
+  font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+    color: #222222;
+    line-height: 12px;
+}
+a{
+  font-family: Verdana, Geneva, sans-serif;
+    font-size: 12pt;
+    color: #222222;
+    line-height: 12px;
+}
