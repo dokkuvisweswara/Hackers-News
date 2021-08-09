@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid orangered;
+}
+#a_link{
+    color: #000000;
+    text-decoration: none;
+}
+.yclinks{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 8pt;
+    color: #828282;
+    text-decoration: none;
+}
+.yclinks a:link{
+    color: #000000;
+    text-decoration: none;
+}

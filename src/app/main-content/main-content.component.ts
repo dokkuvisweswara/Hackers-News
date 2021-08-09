@@ -42,7 +42,7 @@ export class MainContentComponent {
           //   this.conert_time=element.time;
           //   console.log(this.conert_time); 
           //   this.hours = Math.floor((this.conert_time) / 60);
-          // this.minutes = this.conert_time % 60;
+          //   this.minutes = this.conert_time % 60;
           // })
             
         },(err:HttpErrorResponse)=>{console.log(err)});
