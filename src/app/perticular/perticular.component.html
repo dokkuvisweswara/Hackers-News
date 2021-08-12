@@ -1,0 +1,10 @@
+<ul style="list-style-type:none;">
+    <li *ngFor="let res of finalkidsarray" class="list">
+        <div class="perticular">
+            <div class="arrow"></div>
+            <div class="content">
+                <span style="margin: 2em;">{{res.by}}</span><br/>
+                <span [innerHtml]="res.text"></span></div>
+        </div>
+    </li>
+</ul>

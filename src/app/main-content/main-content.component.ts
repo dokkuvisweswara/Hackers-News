@@ -24,27 +24,24 @@ export class MainContentComponent {
 
   ngOnInit(): void {
     this.newsService.getNews().subscribe(response =>{
+      console.log("2");
       this.news=response;this.limitedNews=this.news.slice(0, this.size)
       this.limitedNews.map((data: any)=>{
         this.shownews = data;
         this.url ='https://hacker-news.firebaseio.com/v0/item/' + this.shownews + '.json?print=pretty';
         this.urls.push(this.url)
-        // console.log(this.url);
-        
       },(err:HttpErrorResponse)=>{console.log(err)});
       this.urls.map((element:any) => {
         this.httpClient.get(element).subscribe((res:any)=>{
           this.displayNews =  res;
           this.finalNews.push(this.displayNews);
           this.conert_time=this.finalNews.time;
-          
           // this.finalNews.map((element:any)=>{
           //   this.conert_time=element.time;
           //   console.log(this.conert_time); 
           //   this.hours = Math.floor((this.conert_time) / 60);
           //   this.minutes = this.conert_time % 60;
-          // })
-            
+          // })   
         },(err:HttpErrorResponse)=>{console.log(err)});
         
       });

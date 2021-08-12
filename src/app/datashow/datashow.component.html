@@ -5,7 +5,7 @@
     <div class="titledata">
         <b>{{news.title}}</b><br/>
         <span>{{news.score}} Points by {{news.by}}</span> |
-        <span>{{news.time}}</span> | <span>hide</span> |
-        <a href="#">{{news.descendants}}&nbsp;comments</a>
+        <span><a routerLink="/component/{{news.id}}">{{news.time}}</a></span> | <span>hide</span> |
+        <a  routerLink="/component/{{news.id}}">{{news.descendants}}&nbsp;comments</a>
     </div>
 </div>

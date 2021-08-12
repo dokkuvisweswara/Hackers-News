@@ -6,10 +6,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class NewsService {
-  BASE_URL = "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty";
+  BASE_URL = 'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty';
   constructor( private http: HttpClient ) { }
 
   getNews(): Observable<any> {
-return this.http.get(this.BASE_URL);
+   return this.http.get<any>(this.BASE_URL);
   }
+  
 }

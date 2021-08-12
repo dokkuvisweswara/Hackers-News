@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +8,9 @@ import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './footer/footer.component';
 import { DatashowComponent } from './datashow/datashow.component';
+import { NewsService } from './news.service';
+import { ApiService } from './api.service';
+import { PerticularComponent } from './perticular/perticular.component';
 
 @NgModule({
   declarations: [
@@ -16,16 +18,16 @@ import { DatashowComponent } from './datashow/datashow.component';
     HeaderComponent,
     MainContentComponent,
     FooterComponent,
-    DatashowComponent
+    DatashowComponent,
+    PerticularComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    HttpClientTestingModule,HttpClient
+    HttpClientModule
   ],
   providers: [
-    
+    NewsService, ApiService
   ],
   bootstrap: [AppComponent]
 })

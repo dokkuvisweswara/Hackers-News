@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-datashow',
@@ -8,9 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DatashowComponent implements OnInit {
   @Input() news:any=[];
   @Input() i:any=0;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+//   navigateToParticulare() {
+//     this.router.navigateByUrl(`/component/${this.news.id}`);
+//  }
 }

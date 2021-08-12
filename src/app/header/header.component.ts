@@ -19,14 +19,15 @@ export class HeaderComponent implements OnInit {
    private httpClient : HttpClient
   ) { }
   ngOnInit(): void {
-    alert("||hi||");
+    
     this.getApis();
  }
 
-  public getApis(){
-    console.log("Api Called");
+  getApis(){
     this.httpClient.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty').
     subscribe(response =>{
+      alert("||hi||");
+      console.log("Api Called");
       this.news=response;
       this.limitedNews=this.news.slice(0, this.size)
       this.limitedNews.map((data: any)=>{
